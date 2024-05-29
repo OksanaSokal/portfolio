@@ -14,7 +14,7 @@ export const Contact = () => {
                 <Field placeholder={'Question about your article'} id='subject' />
                 
                 <Field placeholder={'Your message starts with…'}as={'textarea'} id='message'/>
-                <Button>Send</Button>
+                <Button type = {'submit'}>Send</Button>
             </StyledForm>
         </StyledContact>
     );
