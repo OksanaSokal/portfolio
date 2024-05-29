@@ -1,5 +1,7 @@
 import './App.css';
 import { Header } from './layout/header/Header';
+import { About } from './layout/section/about/About';
+import { Contacts } from './layout/section/contacts/Contacts';
 import { Main } from './layout/section/main/Main';
 import { Reviews } from './layout/section/reviews/Reviews';
 import { Skills } from './layout/section/skills/Skills';
@@ -11,9 +13,11 @@ function App() {
         <div className="App">
             <Header />
             <Main />
+            <About/>
             <Skills />
             <Works />
-            <Reviews/>
+            <Reviews />
+            <Contacts/>
         </div>
     );
 }
