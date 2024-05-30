@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button } from "../../../../components/button/Button";
 import { Progress } from "../progress/Progress";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { Achievements } from "../achievements/Achievements";
+import { Achievements } from "../../works/achievements/Achievements";
 
 
 export const Info = () => {

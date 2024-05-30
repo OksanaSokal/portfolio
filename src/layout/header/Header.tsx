@@ -1,15 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
+import { Container } from '../../components/Container';
+import { FlexWrapper } from '../../components/FlexWrapper';
+import { HeaderMenu } from './headerMenu/HeaderMenu';
 
-const items = ['Home', 'About', 'Latest Works', 'Testimonials', 'Contact']
+const items = ['Home', 'About', 'My skills', 'Latest Works', 'Testimonials', 'Contact']
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
-            <Menu menuItems={items}/>
+            <Container>
+                <FlexWrapper justify= {'space-between'} align= {'center'} >
+                    <Logo/>
+                    <HeaderMenu menuItems={items}/>
+                </FlexWrapper>
+            </Container>
         </StyledHeader>
     );
 };
@@ -17,6 +23,10 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: rgb(251, 63, 92);
-    display: flex;
-    justify-content: space-between;
+    padding: 23px 0 27px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 `

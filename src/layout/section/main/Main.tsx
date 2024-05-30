@@ -6,17 +6,15 @@ import { Photo } from '../../../components/photo/Photo';
 
 export const Main = () => {
     return (
-        <div>
-            <FlexWrapper align = {'center'} justify={'space-around'}>
-                <StyledMain>
-                    <span>Hello</span>
-                    <h2>I’m <Name>Daniella Adams</Name> </h2>
-                    <p>I’m a Graphics Designer,Designng has become my everyday affair. masting styles,grids cant be less interesting.</p>
-                    <Button>Download CV</Button>
-                </StyledMain>
-                <Photo src={photo} alt="photo" />
-            </FlexWrapper>
-        </div>
+        <FlexWrapper align = {'center'} justify={'space-around'}>
+            <StyledMain>
+                <span>Hello</span>
+                <h2>I’m <Name>Daniella Adams</Name> </h2>
+                <p>I’m a Graphics Designer,Designng has become my everyday affair. masting styles,grids cant be less interesting.</p>
+                <Button>Download CV</Button>
+            </StyledMain>
+            <Photo src={photo} alt="photo" />
+        </FlexWrapper>
     );
 };
 
@@ -25,7 +23,7 @@ const Name = styled.span`
 `
 
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     min-height: 100vh;
     background-color: rgb(255, 255, 255);;
 `

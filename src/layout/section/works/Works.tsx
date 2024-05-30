@@ -9,6 +9,7 @@ import img3 from "../../../assets/images/card3.webp"
 import img4 from "../../../assets/images/card4.webp"
 import img5 from "../../../assets/images/card5.webp"
 import img6 from "../../../assets/images/card6.webp"
+import { Achievements } from "./achievements/Achievements";
 
 
 const workItems = ['all', 'landing page', 'React', 'spa']
@@ -16,6 +17,11 @@ const workItems = ['all', 'landing page', 'React', 'spa']
 export const Works = () => {
     return (
         <StyledWorks>
+            <FlexWrapper background = {'rgb(254, 197, 206)'} justify={'space-around'} >
+                <Achievements count={'81+'} text={'HAPPY CUSTOMERS'} ></Achievements>
+                <Achievements count={'97+'} text={'Completed Projects'}></Achievements>
+                <Achievements count={'50'} text={'Awards Won'}></Achievements>
+            </FlexWrapper>
             <SectionTitle>Latest work</SectionTitle>
             <Menu menuItems={workItems} />
             <FlexWrapper wrap={'wrap'} justify={'space-between'}>
