@@ -9,7 +9,8 @@ import img3 from "../../../assets/images/card3.webp"
 import img4 from "../../../assets/images/card4.webp"
 import img5 from "../../../assets/images/card5.webp"
 import img6 from "../../../assets/images/card6.webp"
-import { Achievements } from "./achievements/Achievements";
+import { Achievements } from "../about/achievements/Achievements";
+
 
 
 const workItems = ['all', 'landing page', 'React', 'spa']

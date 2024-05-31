@@ -5,9 +5,10 @@ import { Icon } from "../../../../components/icon/Icon";
 type ProgressPropsType = {
     iconId: string
     text?: string
-    value: string
+    width: string
     max?: string
 }
+// value ={props.value} max = {'100'}
 
 export const Progress = (props: ProgressPropsType) => {
     return (
@@ -15,7 +16,7 @@ export const Progress = (props: ProgressPropsType) => {
             <Icon iconId = {props.iconId} />
             <Label>{props.text}
                 <ProgressWrap>
-                    <StyledProgress value ={props.value} max = {'100'}></StyledProgress>
+                    <StyledProgress ></StyledProgress>
                 </ProgressWrap>
             </Label>
         </FlexWrapper>
@@ -28,32 +29,15 @@ const Label =styled.label`
 `
 
 const ProgressWrap =styled.div`
-  
+    background: rgb(196, 196, 196);
     width: 210px;
     height: 8px;
 `
 
-const StyledProgress = styled.progress`
+const StyledProgress = styled.div`
     border: none;
-    background: rgb(196, 196, 196);
-    /* background-color: rgb(251, 63, 92); */
+    background-color: rgb(251, 63, 92);
     height: 8px;
     overflow: hidden;
     display: block;
-    width: 100%;
-/* 
-    &::-moz-progress-bar {
-    border: none;
-    background-color:  rgb(251, 63, 92);
-    
-    }
-
-    &::-webkit-progress-bar {
-    border: none;
-    background-color: rgb(251, 63, 92);
-    }
-
-    &::-webkit-progress-value {
-    background-color:  rgb(251, 63, 92);
-    } */
 `

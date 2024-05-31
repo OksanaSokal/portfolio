@@ -30,6 +30,7 @@ const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
         gap: 30px;
+        flex-wrap: wrap;
     }
 `
 

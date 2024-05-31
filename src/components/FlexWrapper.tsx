@@ -17,4 +17,5 @@ export const FlexWrapper = styled.div <FlexWrapperPropsType>`
     flex-wrap: ${props => props.wrap || 'nowrap'};
     background-color: ${props => props.background};
     width:  ${props => props.background};
+    height: 100%;
 `
