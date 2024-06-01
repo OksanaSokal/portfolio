@@ -20,4 +20,12 @@ export const Achievements = (props: TextPropsType) => {
 const Text = styled.span`
     display: block;
     text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65px;
+
+    & + span {
+        font-size: 36px;
+    }
 `

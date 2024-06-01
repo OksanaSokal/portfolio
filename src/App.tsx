@@ -2,6 +2,7 @@ import './App.css';
 import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { About } from './layout/section/about/About';
+import { AchievementsLine } from './layout/section/achievements-line/AchievementsLine';
 import { Contacts } from './layout/section/contacts/Contacts';
 import { Main } from './layout/section/main/Main';
 import { Reviews } from './layout/section/reviews/Reviews';
@@ -16,6 +17,7 @@ function App() {
             <Main />
             <About/>
             <Skills />
+            <AchievementsLine/>
             <Works />
             <Reviews />
             <Contacts />

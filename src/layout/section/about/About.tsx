@@ -10,7 +10,7 @@ export const About = () => {
     return (
         <StyledAbout>
             <Container>
-                <FlexWrapper justify = {'space-between'}>
+                <FlexWrapper align={'center'} justify={'space-between'}>
                     <Photo src={photo} alt="photo" width = {'360px'} height= {'450px'} />
                     <Info />
                 </FlexWrapper>
@@ -20,5 +20,5 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-    margin: 120px 0 216px;
+    display: flex;
 `

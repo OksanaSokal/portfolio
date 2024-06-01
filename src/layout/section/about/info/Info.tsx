@@ -12,9 +12,9 @@ export const Info = () => {
             <Button>Download CV</Button>
             <Button background= {'transparent'} color= {'rgb(251, 63, 92)'} border = {'1px solid rgb(251, 63, 92)'}>View Portfolio</Button>
             <FlexWrapper wrap= {'wrap'}>
-                <Progress iconId={'ps'} text={'70%'} width={'70%'} />
-                <Progress iconId = {'ai'} text={'80%'} width={'80%'}/>
-                <Progress iconId = {'figma'} text={'50%'} width={'70%'}/>
+                <Progress iconId={'ps'} text={'70%'}  progressWidth={'70%'} />
+                <Progress iconId={'figma'} text={'50%'} progressWidth={'50%'} />
+                <Progress iconId = {'ai'} text={'80%'} progressWidth={'80%'}/>
             </FlexWrapper>
         </InfoWrap>
     );

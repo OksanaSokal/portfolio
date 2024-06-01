@@ -34,5 +34,11 @@ export const GlobalStyle = createGlobalStyle`
 
     section {
         background-color: ${theme.colors.primaryBg};
+        margin: 100px 0 100px;
+
+        &:not(:first-child) {
+            margin: 100px 0 100px;
+        }
+
     }
 `

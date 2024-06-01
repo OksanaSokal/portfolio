@@ -9,7 +9,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={'center'} justify={'space-around'}>
+                <FlexWrapper align={'center'} justify={'space-between'}>
                     <TextWrap>
                         <SmallText>Hello</SmallText>
                         <StyledName>I’m <Name>Daniella Adams</Name> </StyledName>
@@ -24,6 +24,11 @@ export const Main = () => {
         </StyledMain>
     );
 };
+
+const StyledMain = styled.section`
+    min-height: 100vh;
+    display: flex;
+`
 
 const SmallText = styled.span`
     font-size: 28px;
@@ -40,12 +45,6 @@ const StyledName = styled.h2`
 
 const Name = styled.span`
     color: rgb(251, 63, 92);
-`
-
-const StyledMain = styled.section`
-    min-height: 100vh;
-    background-color: rgb(255, 255, 255);
-    display: flex;
 `
 
 const Text = styled.p`

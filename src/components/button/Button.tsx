@@ -16,4 +16,5 @@ export const Button = styled.button<ButtonPropsType>`
     color: ${props => props.color || 'rgb(248, 238, 239)'};
     line-height: 27px;
     font-size: 20px;
+    cursor: pointer;
 `
