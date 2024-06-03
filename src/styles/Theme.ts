@@ -4,6 +4,8 @@ export const theme = {
         accent: 'rgb(251, 63, 92)',
 
         font: 'rgb(25, 16, 24)',
-        secondaryFont: 'rgb(248, 238, 239)'
+        secondaryFont: 'rgb(248, 238, 239)',
+
+        placeholderColor: 'rgb(7, 26, 88)'
     }
 }

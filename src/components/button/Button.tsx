@@ -14,7 +14,6 @@ export const Button = styled.button<ButtonPropsType>`
     border-radius: 18px;
     border: ${props => props.border || 'none'};
     color: ${props => props.color || 'rgb(248, 238, 239)'};
-    line-height: 27px;
     font-size: 20px;
-    cursor: pointer;
+    
 `

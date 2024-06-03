@@ -23,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     a {
         text-decoration: none;
+        color: ${theme.colors.font};
+        cursor: pointer;
     }
     ul {
         list-style: none;
@@ -30,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
     }
 
     section {
@@ -40,5 +43,20 @@ export const GlobalStyle = createGlobalStyle`
             margin: 100px 0 100px;
         }
 
+    }
+
+    h3 {
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0px;
+    }
+
+    p {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0.06rem;
     }
 `

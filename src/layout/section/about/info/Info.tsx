@@ -41,8 +41,5 @@ const InfoWrap = styled.div`
 
 
 const Text = styled.p`
-    font-weight: 400;
-    font-size: 24px;
-    letter-spacing: 0.06rem;
     margin-bottom: 66px;
 `

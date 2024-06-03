@@ -59,8 +59,8 @@ const StyledProgressLine = styled.div<ProgressPropsType>`
         right: 0;
         z-index: 2;
         font-size: 14px;
-font-weight: 400;
-line-height: 19px;
-letter-spacing: 0%;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0%;
     }
 `
