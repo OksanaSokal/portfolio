@@ -4,8 +4,7 @@ import { theme } from "./Theme";
 export const GlobalStyle = createGlobalStyle`
     *,
     *::before,
-    *::after,
-    *:focus-visible {
+    *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;

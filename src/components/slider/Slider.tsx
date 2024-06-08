@@ -9,18 +9,18 @@ export const Slider = () => {
             <Slide>
                 <FlexWrapper direction={'column'}>
                     <IconWrap>
-                        <Icon iconId={'quote'} />
+                        <Icon iconId={'quote'} width={'110px'} height={'86px'} viewBox={'0 0 110 86'}/>
                     </IconWrap>
                     <Image src={avatar} />
                     <Name>Adams Ademola</Name>
                     <span>Happy Client</span>
                     <Text>“Everyone working in the office is very knowledgeable about all types of dental work and options for your individual needs.”</Text>
                     <StarWrapper>
-                        <Icon iconId={'star'} width={'26px'} height={'26px'} />
-                        <Icon iconId= {'star'} width={'26px'} height={'26px'} />
-                        <Icon iconId= {'star'} width={'26px'} height={'26px'} />
-                        <Icon iconId= {'star'} width={'26px'} height={'26px'} />
-                        <Icon iconId= {'star'} width={'26px'} height={'26px'} />
+                        <Icon iconId={'star'} width={'26px'} height={'26px'} viewBox={'0 0 26 26'} />
+                        <Icon iconId= {'star'} width={'26px'} height={'26px'} viewBox={'0 0 26 26'}/>
+                        <Icon iconId= {'star'} width={'26px'} height={'26px'} viewBox={'0 0 26 26'}/>
+                        <Icon iconId= {'star'} width={'26px'} height={'26px'} viewBox={'0 0 26 26'}/>
+                        <Icon iconId= {'star'} width={'26px'} height={'26px'} viewBox={'0 0 26 26'}/>
                     </StarWrapper>  
                 </FlexWrapper>
             </Slide>
@@ -47,7 +47,7 @@ const Slide = styled.div`
     box-shadow: 0px 54px 104px 0px rgba(0, 0, 0, 0.04);
     background: rgb(255, 255, 255);
     padding: 52px 57px;
-    margin: 85px 0 115px;
+    margin: 85px 0 40px;
 
     position: relative;
 `
@@ -85,6 +85,8 @@ const Text = styled.p`
     line-height: 26px;
 `
 const Pagination = styled.div`
+    margin-bottom: 60px;
+
     span {
         display: inline-block;
         width: 10px;
@@ -105,4 +107,5 @@ const Pagination = styled.div`
 const StarWrapper = styled.div`
     display: flex;
     justify-content: center;
+    gap: 6px;
 `

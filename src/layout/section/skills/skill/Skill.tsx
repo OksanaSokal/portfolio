@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
+import testIcon from './../../../../assets/images/svg/instagram.svg'
+import { theme } from '../../../../styles/Theme';
 
 type SkillPropsType = {
     iconId: string
@@ -43,6 +45,8 @@ const SkillText = styled.p`
 `
 const IconWrapper = styled.div`
     position: relative;
+    z-index: 0;
+    color: ${theme.colors.accent};
 
     &::before {
         content: '';
@@ -56,5 +60,6 @@ const IconWrapper = styled.div`
         top: 50%;
         left: 50%;
         transform-origin: top left;
+        z-index: -1;
     }
 `

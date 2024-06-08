@@ -14,7 +14,7 @@ type ProgressPropsType = {
 export const Progress = (props: ProgressPropsType) => {
     return (
         <StyledProgress>
-            <Icon iconId={props.iconId} width={'40px'} height={'40px'} y={'0'} />
+            <Icon iconId={props.iconId} width={'40px'} height={'40px'} />
             <Label>
                 <ProgressWrap>
                     <StyledProgressLine iconId={props.iconId} progressWidth={props.progressWidth}>

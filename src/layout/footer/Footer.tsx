@@ -11,12 +11,12 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper justify={'space-around'} gap = {'10px'} margin={'65px 0 35px'}>
                     <Contact>
-                        <Icon iconId={'phone'} width={'23px'} height={'23px'}></Icon>
+                        <Icon iconId={'phone'} width={'24px'} height={'23px'} viewBox={'0 0 24 23'}></Icon>
                         09028793244
                     </Contact>
                     <Contact>
-                        <Icon iconId={'email'} width={'23px'} height={'17px'}></Icon>
-                        shalewa64@gmAil.com
+                        <Icon iconId={'email'} width={'24px'} height={'23px'} viewBox={'0 0 24 23'}></Icon>
+                        shalewa64@gmail.com
                     </Contact>
                     <Contact>
                     497 Evergreen Rd. Roseville, CA 95673
@@ -26,27 +26,27 @@ export const Footer = () => {
                     <SocialList>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId={'twitter'} width={'22px'} height={'22px'}  viewBox={'0 0  22px 22px'}/>
+                                <Icon iconId={'twitter'} width={'24px'} height={'23px'}  viewBox={'0 0  24 23'}/>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId={'instagram'} width={'22px'} height={'22px'} viewBox={'0 0  22px 22px'}/>
+                                <Icon iconId={'instagram'} width={'24px'} height={'23px'} viewBox={'0 0  24 23'}/>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId={'snapchat'} width={'22px'} height={'22px'} viewBox={'0 0  22px 22px'}/>
+                                <Icon iconId={'snapchat'} width={'24px'} height={'23px'} viewBox={'0 0  24 23'}/>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId={'facebook'} width={'22px'} height={'22px'} viewBox={'0 0  22px 22px'}/>
+                                <Icon iconId={'facebook'} width={'24px'} height={'23px'} viewBox={'0 0  24 23'}/>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId={'youtube'} width={'22px'} height={'22px'} viewBox={'0 0  22px 22px'}/>
+                                <Icon iconId={'youtube'} width={'34px'} height={'23px'} viewBox={'0 0  34 23'}/>
                             </SocialLink>
                         </SocialItem>
                     </SocialList>
@@ -65,11 +65,12 @@ const StyledFooter = styled.footer`
 const SocialList = styled.ul`
     display: flex;
     gap: 15px;
-
+    width: 24px;
+    height: 22px;
 `
 
 const SocialLink = styled.a`
-    background-color: #2ea9c5
+    
 `
 
 const SocialItem = styled.li`
@@ -82,8 +83,9 @@ const Contact = styled.span`
     font-family: 'Nunito', sans-serif;
     font-size: 24px;
     font-weight: 500;
-    margin: 0 10px;
-    padding: 0 20px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
 
     position: relative;
 
@@ -94,7 +96,7 @@ const Contact = styled.span`
         background-color:  rgb(248, 238, 239);
         height: 35px;
         width: 4px;
-        left: -20%;
+        left: 0;
     }
 
     &:nth-child(2)::after {
@@ -104,11 +106,11 @@ const Contact = styled.span`
         background-color:  rgb(248, 238, 239);
         height: 35px;
         width: 4px;
-        right: -20%;
+        right: 0;
     }
 
     & svg {
         position: absolute;
-        left: 0px;
+        left: 15px;
     }
 `
