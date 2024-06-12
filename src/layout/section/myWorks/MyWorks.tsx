@@ -27,5 +27,8 @@ export const MyWorks = () => {
 };
 
 const StyledWorks = styled.section`
+    ${FlexWrapper} {
+        gap: 30px;
+    }
 `
 

@@ -67,6 +67,7 @@ const SocialList = styled.ul`
     gap: 15px;
     width: 24px;
     height: 22px;
+    justify-content: center;
 `
 
 const SocialLink = styled.a`
@@ -86,6 +87,8 @@ const Contact = styled.span`
     padding: 0 30px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 5px;
 
     position: relative;
 
@@ -107,6 +110,12 @@ const Contact = styled.span`
         height: 35px;
         width: 4px;
         right: 0;
+
+        & span {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
     }
 
     & svg {

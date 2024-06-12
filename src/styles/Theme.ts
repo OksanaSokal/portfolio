@@ -7,5 +7,11 @@ export const theme = {
         secondaryFont: 'rgb(248, 238, 239)',
 
         placeholderColor: 'rgb(7, 26, 88)'
+    },
+
+    media: {
+        tablet: 'screen and (max-width: 768px)',
+        mobile: 'screen and (max-width: 576px)',
+        desktop: 'screen and (min-width: 1140px)',
     }
 }

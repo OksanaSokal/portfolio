@@ -36,12 +36,19 @@ export const GlobalStyle = createGlobalStyle`
 
     section {
         background-color: ${theme.colors.primaryBg};
-        margin: 100px 0 100px;
+        margin: 100px 0;
 
         &:not(:first-child) {
-            margin: 100px 0 100px;
+            margin: 100px 0;
+
+            @media ${theme.media.mobile} {
+            margin: 80px 0;
+        }
         }
 
+        @media ${theme.media.mobile} {
+            margin: 80px 0;
+        }
     }
 
     h3 {

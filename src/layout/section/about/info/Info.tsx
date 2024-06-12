@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Button } from "../../../../components/button/Button";
 import { Progress } from "../progress/Progress";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { font } from "../../../../styles/Common";
+import { theme } from "../../../../styles/Theme";
 
 
 export const Info = () => {
@@ -22,9 +24,7 @@ export const Info = () => {
 
 
 const Title = styled.h1`
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
+    ${font({family: "'Nunito', sans-serif", weight: 700, Fmax: 48, Fmin: 28})};
     color: #191018;
     text-transform: capitalize;
     margin-bottom: 15px;
@@ -32,14 +32,22 @@ const Title = styled.h1`
 
 const InfoWrap = styled.div`
     max-width: 606px;
+    margin-top: 60px;
 
     & button:first-of-type {
         margin-right: 38px;
         margin-bottom: 66px;
+    }
+
+    @media ${theme.media.tablet} {
+        ${FlexWrapper} {
+            justify-content: start;
+        }
     }
 `
 
 
 const Text = styled.p`
     margin-bottom: 66px;
+    ${font({Fmax: 24, Fmin: 18})};
 `

@@ -8,9 +8,11 @@ import { Container } from "../../../components/Container";
 export const Reviews = () => {
     return (
         <StyledReviews>
-            <FlexWrapper direction="column" align="center">
-                <Slider/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper direction="column" align="center">
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledReviews>
     );
 };

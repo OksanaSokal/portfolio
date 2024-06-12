@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { Link } from "../../../../components/link/Link";
 import { Button } from "../../../../components/button/Button";
+import { theme } from "../../../../styles/Theme";
 
 
 
@@ -32,8 +33,8 @@ export const MyWork = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
 background-color: rgb(248, 238, 239);
-    max-width: 540px;
-    width: 100%;
+    width: 330px;
+    flex-grow: 1;
 
     & ${Link} {
         padding: 10px 0;
@@ -43,13 +44,22 @@ background-color: rgb(248, 238, 239);
         }
     }
 
-    
+    @media ${theme.media.desktop} {
+        max-width: 540px;
+    }
 `
 const ImageWrapper = styled.div`
     position: relative;
 
-    &:hover {
-        &::before {
+    ${Button} {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
             content: '';
             position: absolute;
             left: 0;
@@ -58,18 +68,27 @@ const ImageWrapper = styled.div`
             bottom: 0;
             backdrop-filter: blur(8px);
             background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
         }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
         ${Button} {
             opacity: 1;
         }
     }
 
-    ${Button} {
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
+        }
     }
 `
 

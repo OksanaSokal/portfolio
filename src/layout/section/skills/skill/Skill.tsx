@@ -25,9 +25,13 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 330px;
     padding: 62px 20px 40px;
-    /* display: flex; */
+    flex-grow: 1;
+
+    @media ${theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 
 const SkillTitle = styled.h3`
