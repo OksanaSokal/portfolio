@@ -28,11 +28,14 @@ export const Progress = (props: ProgressPropsType) => {
 const StyledProgress = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 270px;
     margin-bottom: 14px;
 
-    &:first-child {
+
+    /* &:first-child {
         margin-right: 70px;
-    }
+    } */
 `
 
 const Label =styled.label`

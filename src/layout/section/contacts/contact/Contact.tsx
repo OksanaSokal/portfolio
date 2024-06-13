@@ -17,9 +17,6 @@ export const Contact = () => {
     );
 };
 
-const StyledContact = styled.div`
-`
-
 const StyledForm = styled.form`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 18px;
@@ -40,6 +37,10 @@ const StyledForm = styled.form`
 
     ${Button} {
         width: 223px;
+    }
+
+    @media ${theme.media.tablet} {
+        align-items: center;
     }
 `
 const Field = styled.input`

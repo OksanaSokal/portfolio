@@ -17,8 +17,8 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-    width: 30%;
-    margin-bottom: 60px;
+    width: 330px;
+    flex-grow: 1;
 `
 
 const Image = styled.img`

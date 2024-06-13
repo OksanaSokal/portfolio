@@ -17,7 +17,7 @@ export const Works = () => {
         <StyledWorks>
             <Container>
                 <SectionTitle>Latest work</SectionTitle>
-                <FlexWrapper wrap={'wrap'} justify={'space-between'}>
+                <FlexWrapper wrap={'wrap'} justify={'space-between'} gap={'35px'}>
                     <Work title={'Project title'} src={img1} />
                     <Work title={'Project title'} src={img2}/>
                     <Work title={'Project title'} src={img3}/>
@@ -32,5 +32,6 @@ export const Works = () => {
 
 
 const StyledWorks = styled.section`
+ 
 `
 

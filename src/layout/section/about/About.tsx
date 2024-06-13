@@ -16,7 +16,6 @@ export const About = () => {
                     <PhotoWrapper>
                         <Photo src={photo} alt="photo" width = {'360px'} height= {'450px'} />
                     </PhotoWrapper>
-                    
                     <Info />
                 </FlexWrapper>
             </Container>
@@ -31,10 +30,15 @@ const StyledAbout = styled.section`
         ${FlexWrapper} {
             justify-content: center;
         }
+
+        h1, p {
+            text-align: center;
+        }
     }
 `
 
 const PhotoWrapper = styled.div`
+    margin: 0 auto;
     z-index: 0;
     position: relative;
 

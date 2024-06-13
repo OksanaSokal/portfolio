@@ -13,7 +13,7 @@ export const Main = () => {
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'} wrap={'wrap-reverse'}>
                     <TextWrap>
-                        <SmallText>Hello</SmallText>
+                        <SmallText>Hello,</SmallText>
                         <StyledName>I’m <Name>Daniella Adams</Name> </StyledName>
                         <Text>I’m a Graphics Designer,Designng has become my everyday affair. masting styles,grids cant be less interesting.</Text>
                         <Button>Download CV</Button>
@@ -31,11 +31,11 @@ const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
 
-    @media ${theme.media.tablet} {
+    /* @media ${theme.media.tablet} {
         ${FlexWrapper} {
             justify-content: center;
         }
-    }
+    } */
 `
 
 const SmallText = styled.span`
@@ -59,10 +59,22 @@ const Text = styled.p`
     margin-bottom: 45px;
 `
 const TextWrap = styled.div`
+    display: flex;
+    flex-direction: column;
     max-width: 480px;
+    margin: 0 auto;
+
+    @media ${theme.media.tablet} {
+        align-items: center;
+
+        & p {
+            text-align: center;
+        }
+    }
 `
 
 const PhotoWrapper = styled.div`
+    margin: 0 auto;
     z-index: 0;
     position: relative;
 
