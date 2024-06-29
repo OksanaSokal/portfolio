@@ -10,10 +10,11 @@ type ButtonPropsType = {
 
 export const Button = styled.button<ButtonPropsType>`
     background-color: ${props => props.background || 'rgb(251, 63, 92)'};
-    padding: ${props => props.padding || '19px 57px'};
+    padding: ${props => props.padding || '19px 0'};
     border-radius: 18px;
     border: ${props => props.border || 'none'};
     color: ${props => props.color || 'rgb(248, 238, 239)'};
     font-size: 20px;
-    
+    max-width: 225px;
+    width: 100%;
 `

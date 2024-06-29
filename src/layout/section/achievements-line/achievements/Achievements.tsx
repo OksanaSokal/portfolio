@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { font } from "../../../../styles/Common";
+import React from "react";
+import { S } from "../Achievements_Styled";
 
 type TextPropsType = {
     count: string
@@ -8,24 +8,11 @@ type TextPropsType = {
 }
 
 
-export const Achievements = (props: TextPropsType) => {
+export const Achievements: React.FC<TextPropsType> = (props: TextPropsType) => {
     return (
         <FlexWrapper direction={'column'} justify={'center'}>
-            <Text>{props.count}</Text>
-            <Text>{props.text}</Text>
+            <S.Text>{props.count}</S.Text>
+            <S.Text>{props.text}</S.Text>
         </FlexWrapper>
     );
 };
-
-
-const Text = styled.span`
-    ${font({family: "'Nunito', sans-serif", weight: 700, Fmax: 48, Fmin: 12})}
-    display: block;
-    text-align: center;
-
-    line-height: 65px;
-
-    & + span {
-        ${font({family: "'Nunito', sans-serif", weight: 700, Fmax: 36, Fmin: 11})}
-    }
-`

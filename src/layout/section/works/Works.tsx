@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "./work/Work";
@@ -8,30 +7,48 @@ import img3 from "../../../assets/images/card3.webp"
 import img4 from "../../../assets/images/card4.webp"
 import img5 from "../../../assets/images/card5.webp"
 import img6 from "../../../assets/images/card6.webp"
-
+import { S } from "./Works_Styles";
 import { Container } from "../../../components/Container";
+import React from "react";
 
+const worksData = [
+    {
+        title: 'Project title',
+        src: img1
+    },
+    {
+        title: 'Project title',
+        src: img2
+    },
+    {
+        title: 'Project title',
+        src: img3
+    },
+    {
+        title: 'Project title',
+        src: img4
+    },
+    {
+        title: 'Project title',
+        src: img5
+    },
+    {
+        title: 'Project title',
+        src: img6
+    },
+]
 
-export const Works = () => {
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                 <SectionTitle>Latest work</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'} gap={'35px'}>
-                    <Work title={'Project title'} src={img1} />
-                    <Work title={'Project title'} src={img2}/>
-                    <Work title={'Project title'} src={img3}/>
-                    <Work title={'Project title'} src={img4}/>
-                    <Work title={'Project title'} src={img5}/>
-                    <Work title={'Project title'} src={img6}/>
+                    {worksData.map((w, ind) => {
+                        return <Work title={w.title} key={ind} src={w.src}/>
+                    })}
                 </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
-
-
-const StyledWorks = styled.section`
- 
-`
-

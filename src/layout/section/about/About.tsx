@@ -2,57 +2,22 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Photo } from "../../../components/photo/Photo";
 import photo from '../../../assets/images/photo2.webp';
 import { Info } from "./info/Info";
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
-import rect from '../../../assets/images/svg/rect-light.svg';
-import { theme } from "../../../styles/Theme";
+import React from "react";
+import { S } from "./About_Styles";
 
 
-export const About = () => {
+export const About: React.FC = () => {
     return (
-        <StyledAbout>
+        <S.StyledAbout>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'} gap={'50px'}>
-                    <PhotoWrapper>
+                    <S.PhotoWrapper>
                         <Photo src={photo} alt="photo" width = {'360px'} height= {'450px'} />
-                    </PhotoWrapper>
+                    </S.PhotoWrapper>
                     <Info />
                 </FlexWrapper>
             </Container>
-       </StyledAbout>
+       </S.StyledAbout>
     );
 };
-
-const StyledAbout = styled.section`
-    display: flex;
-
-    @media ${theme.media.tablet} {
-        ${FlexWrapper} {
-            justify-content: center;
-        }
-
-        h1, p {
-            text-align: center;
-        }
-    }
-`
-
-const PhotoWrapper = styled.div`
-    margin: 0 auto;
-    z-index: 0;
-    position: relative;
-
-    &::before {
-        content: '';
-        width: 388px;
-        height: 432px;
-        display: block;
-
-        position: absolute;
-        bottom: -50px;
-        right: -50px;
-        z-index: -1;
-        background-image: url(${rect});
-        background-repeat: no-repeat;
-    }
-`

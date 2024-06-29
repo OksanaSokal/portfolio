@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Slider } from "../../../components/slider/Slider";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
+import React from "react";
 
-export const Reviews = () => {
+export const Reviews: React.FC = () => {
     return (
         <StyledReviews>
             <Container>
