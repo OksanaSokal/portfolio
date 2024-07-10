@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Link = styled.a`
+export const Link = styled.a<{active?: boolean}>`
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 14px;
@@ -27,5 +27,9 @@ export const Link = styled.a`
         left: 0;
         right: 0;
         z-index: -1;
+
+        ${props => props.active && css<{ active?: boolean }>`
+            height: 10px;
+        `}
     }
 `

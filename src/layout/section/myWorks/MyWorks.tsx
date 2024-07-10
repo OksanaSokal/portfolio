@@ -1,39 +1,82 @@
 import { SectionTitle } from "../../../components/SectionTitle";
-import { TabMenu } from "./tabMenu/TabMenu";
+import { TabMenu, TabStatusType } from "./tabMenu/TabMenu";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import img1 from "../../../assets/images/social-network.png"
 import img2 from "../../../assets/images/timer.png"
 import { Container } from "../../../components/Container";
 import { MyWork } from "./myWork/MyWork";
-import React from "react";
+import React, { useState } from "react";
 import { S } from "./MyWorks_Styles";
 
-const workData = [
+const worksData = [
     {
         title: 'Social Network',
         src: img1,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        type: 'spa'
     },
     {
         title: 'Timer',
         src: img2,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim',
+        type: 'react'
     }
 ]
 
-const workItems = ['all', 'landing page', 'React', 'spa']
+
+const tabsItems: Array<{ title: string, status: TabStatusType }> = [
+    {
+        title: 'All',
+        status: 'all'
+    },
+    {
+        title: 'landing page',
+        status: 'landing'
+    },
+    {
+        title: 'React',
+        status: 'react'
+    },
+    {
+        title: 'spa',
+        status: 'spa'
+    }
+]
 
 export const MyWorks: React.FC = () => {
+    const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
+    let filteredWorks = worksData
+
+    if (currentFilterStatus === 'landing') {
+        filteredWorks = worksData.filter(work => work.type === 'landing')
+    }
+
+    if (currentFilterStatus === 'react') {
+        filteredWorks = worksData.filter(work => work.type === 'react')
+    }
+
+    if (currentFilterStatus === 'spa') {
+        filteredWorks = worksData.filter(work => work.type === 'spa')
+    }
+
+    function changeFilterStatus(value: TabStatusType) {
+        setCurrentFilterStatus(value)
+    }
+
+
     return (
         <S.Works>
             <Container>
                 <SectionTitle>My works</SectionTitle>
-                <TabMenu menuItems={workItems} />
+                <TabMenu tabsItems={tabsItems}
+                    changeFilterStatus={changeFilterStatus}
+                    currentFilterStatus={currentFilterStatus} />
                 <FlexWrapper wrap={'wrap'} justify={'space-between'} align={'flex-start'}>
-                    {workData.map((w) => {
+                    {filteredWorks.map((w, index) => {
                         return <MyWork title={w.title}
-                                        src={w.src}
-                                        text={w.text} />
+                            src={w.src}
+                            text={w.text}
+                            key={ index} />
                     })}
 
                 </FlexWrapper>
