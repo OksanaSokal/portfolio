@@ -5,17 +5,18 @@ import { Container } from "../../../components/Container";
 import React from "react";
 
 export const Reviews: React.FC = () => {
-    return (
-        <StyledReviews>
-            <Container>
-                <FlexWrapper direction="column" align="center">
-                    <Slider/>
-                </FlexWrapper>
-            </Container>
-        </StyledReviews>
-    );
+  return (
+    <StyledReviews id={"testimonials"}>
+      <Container>
+        <FlexWrapper direction="column" align="center">
+          <Slider />
+        </FlexWrapper>
+      </Container>
+    </StyledReviews>
+  );
 };
 
-const StyledReviews =styled.section`
-    background: rgba(251, 63, 92, 0.3);
-`
+const StyledReviews = styled.section`
+  background: rgba(251, 63, 92, 0.3);
+  position: relative;
+`;
